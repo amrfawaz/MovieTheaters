@@ -44,6 +44,7 @@
 		848FB79B2C36123B00624717 /* banquemisr.challenge05UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = banquemisr.challenge05UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848FB79F2C36123B00624717 /* banquemisr_challenge05UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = banquemisr_challenge05UITests.swift; sourceTree = "<group>"; };
 		848FB7A12C36123B00624717 /* banquemisr_challenge05UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = banquemisr_challenge05UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		848FB7AE2C3612BC00624717 /* Packages */ = {isa = PBXFileReference; lastKnownFileType = text; path = Packages; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 		848FB7832C36123000624717 /* banquemisr.challenge05 */ = {
 			isa = PBXGroup;
 			children = (
+				848FB7AE2C3612BC00624717 /* Packages */,
 				848FB7842C36123000624717 /* banquemisr_challenge05App.swift */,
 				848FB7862C36123000624717 /* ContentView.swift */,
 				848FB7882C36123900624717 /* Assets.xcassets */,
