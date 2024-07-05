@@ -5,15 +5,51 @@ import PackageDescription
 
 let package = Package(
     name: "Packages",
+    platforms: [
+        .iOS(.v16)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
+        .library(
+            name: "AppConfigurations",
+            targets: ["AppConfigurations"]),
+        .library(
+            name: "CoreInterface",
+            targets: ["CoreInterface"]),
+        .library(
+            name: "Networking",
+            targets: ["Networking"]),
         .library(
             name: "Packages",
             targets: ["Packages"]),
+        .library(
+            name: "MoviesList",
+            targets: ["MoviesList"])
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        .target(
+            name: "AppConfigurations",
+            dependencies: []),
+        .target(
+            name: "CoreInterface",
+            dependencies: []),
+        .target(
+            name: "Networking",
+            dependencies: []),
+        .target(
+            name: "MoviesList",
+            dependencies: [
+                "CoreInterface",
+                "AppConfigurations",
+                "Networking"
+            ]),
+        .target(
+            name: "MovieDetails",
+            dependencies: [
+                "CoreInterface",
+                "AppConfigurations",
+                "Networking"
+            ]),
+
         .target(
             name: "Packages"),
         .testTarget(

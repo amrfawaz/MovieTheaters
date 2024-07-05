@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import MoviesList
 
 @main
 struct banquemisr_challenge05App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let moviesRepository = MovieRepositoryImpl(api: MovieAPI())
+            let fetchMoviesUseCase = FetchMoviesUseCase(repository: moviesRepository)
+            let moviesListViewModel = PopularMoviesViewModel(fetchMoviesUseCase: fetchMoviesUseCase)
+
+            PopularMoviesListView(viewModel: moviesListViewModel)
         }
     }
 }
