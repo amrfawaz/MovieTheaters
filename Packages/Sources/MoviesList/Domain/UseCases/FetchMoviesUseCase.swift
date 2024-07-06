@@ -14,7 +14,9 @@ public class FetchMoviesUseCase {
         self.repository = repository
     }
 
-    func execute(page: Int) async throws -> FetchPopularMoviesResponse {
-        return try await repository.fetchMovies(page: page)
+    func execute<T: FetchMoviesRequest>(request: T, page: Int) async throws -> FetchPopularMoviesResponse {
+        var request = request
+        request.params["page"] = "\(page)"
+        return try await repository.fetchMovies(request: request)
     }
 }

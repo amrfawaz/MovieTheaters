@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Tabs
 import MoviesList
 
 @main
@@ -14,9 +15,8 @@ struct banquemisr_challenge05App: App {
         WindowGroup {
             let moviesRepository = MovieRepositoryImpl(api: MovieAPI())
             let fetchMoviesUseCase = FetchMoviesUseCase(repository: moviesRepository)
-            let moviesListViewModel = PopularMoviesViewModel(fetchMoviesUseCase: fetchMoviesUseCase)
 
-            PopularMoviesListView(viewModel: moviesListViewModel)
+            TabsView(viewModel: TabsViewModel(fetchMoviesUseCase: fetchMoviesUseCase))
         }
     }
 }

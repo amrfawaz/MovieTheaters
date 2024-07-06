@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol MovieRepository {
-    func fetchMovies(page: Int) async throws -> FetchPopularMoviesResponse
+    func fetchMovies<T: FetchMoviesRequest>(request: T) async throws -> FetchPopularMoviesResponse
 }

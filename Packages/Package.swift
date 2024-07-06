@@ -19,11 +19,14 @@ let package = Package(
             name: "Networking",
             targets: ["Networking"]),
         .library(
-            name: "Packages",
-            targets: ["Packages"]),
+            name: "Tabs",
+            targets: ["Tabs"]),
         .library(
             name: "MoviesList",
-            targets: ["MoviesList"])
+            targets: ["MoviesList"]),
+        .library(
+            name: "MovieDetails",
+            targets: ["MovieDetails"])
     ],
     targets: [
         .target(
@@ -36,11 +39,17 @@ let package = Package(
             name: "Networking",
             dependencies: []),
         .target(
+            name: "Tabs",
+            dependencies: [
+                "MoviesList"
+            ]),
+        .target(
             name: "MoviesList",
             dependencies: [
                 "CoreInterface",
                 "AppConfigurations",
-                "Networking"
+                "Networking",
+                "MovieDetails"
             ]),
         .target(
             name: "MovieDetails",
@@ -49,11 +58,5 @@ let package = Package(
                 "AppConfigurations",
                 "Networking"
             ]),
-
-        .target(
-            name: "Packages"),
-        .testTarget(
-            name: "PackagesTests",
-            dependencies: ["Packages"]),
     ]
 )

@@ -14,7 +14,7 @@
 		848FB7962C36123B00624717 /* banquemisr_challenge05Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FB7952C36123B00624717 /* banquemisr_challenge05Tests.swift */; };
 		848FB7A02C36123B00624717 /* banquemisr_challenge05UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FB79F2C36123B00624717 /* banquemisr_challenge05UITests.swift */; };
 		848FB7A22C36123B00624717 /* banquemisr_challenge05UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FB7A12C36123B00624717 /* banquemisr_challenge05UITestsLaunchTests.swift */; };
-		848FB7B12C361E7300624717 /* MoviesList in Frameworks */ = {isa = PBXBuildFile; productRef = 848FB7B02C361E7300624717 /* MoviesList */; };
+		848FB7B42C378C8F00624717 /* Tabs in Frameworks */ = {isa = PBXBuildFile; productRef = 848FB7B32C378C8F00624717 /* Tabs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				848FB7B12C361E7300624717 /* MoviesList in Frameworks */,
+				848FB7B42C378C8F00624717 /* Tabs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +158,7 @@
 			);
 			name = banquemisr.challenge05;
 			packageProductDependencies = (
-				848FB7B02C361E7300624717 /* MoviesList */,
+				848FB7B32C378C8F00624717 /* Tabs */,
 			);
 			productName = banquemisr.challenge05;
 			productReference = 848FB7812C36123000624717 /* banquemisr.challenge05.app */;
@@ -605,9 +605,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		848FB7B02C361E7300624717 /* MoviesList */ = {
+		848FB7B32C378C8F00624717 /* Tabs */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = MoviesList;
+			productName = Tabs;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

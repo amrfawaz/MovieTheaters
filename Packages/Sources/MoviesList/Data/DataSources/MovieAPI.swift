@@ -10,7 +10,7 @@ import AppConfigurations
 import Networking
 
 public protocol MovieAPIProtocol {
-    func fetchMovies(page: Int) async throws -> FetchPopularMoviesResponse
+    func fetchMovies(request: FetchMoviesRequest) async throws -> FetchPopularMoviesResponse
 }
 
 public class MovieAPI: MovieAPIProtocol {
@@ -23,15 +23,13 @@ public class MovieAPI: MovieAPIProtocol {
 
     public init() {}
 
-    public func fetchMovies(page: Int) async throws -> FetchPopularMoviesResponse {
-        var fetchPopularMoviesRequest = FetchPopularMoviesRequest()
-        guard let url = fetchPopularMoviesRequest.request?.url else { throw NetworkError.invalidURL }
+    public func fetchMovies(request: FetchMoviesRequest) async throws -> FetchPopularMoviesResponse {
+        guard let url = request.request?.url else { throw NetworkError.invalidURL }
 
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
-        fetchPopularMoviesRequest.params["page"] = "\(page)"
-        components?.queryItems = fetchPopularMoviesRequest.params.map { URLQueryItem(name: $0.key, value: $0.value) }
+        components?.queryItems = request.params.map { URLQueryItem(name: $0.key, value: $0.value) }
 
-        guard let request = fetchPopularMoviesRequest.request else { throw NetworkError.invalidRequest }
+        guard let request = request.request else { throw NetworkError.invalidRequest }
 
         let network = NetworkManager()
 

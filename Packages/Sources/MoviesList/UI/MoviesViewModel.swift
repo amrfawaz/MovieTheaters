@@ -1,5 +1,5 @@
 //
-//  PopularMoviesViewModel.swift
+//  MoviesViewModel.swift
 //
 //
 //  Created by AmrFawaz on 04/07/2024.
@@ -8,22 +8,27 @@
 import Foundation
 import Combine
 
-public final class PopularMoviesViewModel: ObservableObject {
+public class MoviesViewModel: ObservableObject {
     @Published var movies: [Movie] = []
     @Published var errorMessage: String = ""
+
+    public var pageTitle: String {
+        ""
+    }
 
     var currentPage: Int = 0
     var totalPages: Int = 0
     var isLoading: Bool = false
 
     private let fetchMoviesUseCase: FetchMoviesUseCase
-    private var cancellables = Set<AnyCancellable>()
 
-    public init(fetchMoviesUseCase: FetchMoviesUseCase) {
+    public init(
+        fetchMoviesUseCase: FetchMoviesUseCase
+    ) {
         self.fetchMoviesUseCase = fetchMoviesUseCase
     }
 
-    func fetchMovies(refreshMovies: Bool = false) {
+    final func fetchMovies(refreshMovies: Bool = false) {
         if refreshMovies {
             resetMovies()
         }
@@ -33,7 +38,7 @@ public final class PopularMoviesViewModel: ObservableObject {
 
         Task {
             do {
-                let response = try await fetchMoviesUseCase.execute(page: currentPage + 1)
+                let response = try await fetchMoviesUseCase.execute(request: createRequest(), page: currentPage + 1)
                 DispatchQueue.main.async {
                     self.movies.append(contentsOf: response.movies)
                     self.currentPage = response.page
@@ -48,13 +53,15 @@ public final class PopularMoviesViewModel: ObservableObject {
             }
         }
     }
-}
 
-private extension PopularMoviesViewModel {
-    func resetMovies() {
+    final func resetMovies() {
         self.movies = []
         self.currentPage = 0
         self.totalPages = 0
         self.isLoading = false
+    }
+
+    func createRequest() -> FetchMoviesRequest {
+        FetchPopularMoviesRequest()
     }
 }
