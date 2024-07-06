@@ -43,6 +43,9 @@ public struct MoviesView<ViewModel: MoviesViewModel>: View {
 
     private var content: some View {
         ScrollView {
+            if viewModel.isLoading {
+                ProgressView()
+            }
             VStack(spacing: Style.Spacing.md) {
                 title
                 list
@@ -79,10 +82,8 @@ public struct MoviesView<ViewModel: MoviesViewModel>: View {
             }
         }
         .navigationDestination(for: Movie.self) { movie in
-            MovieDetailsView(
-                viewModel: MovieDetailsViewModel(movieID: movie.id),
-                path: $path
-            )
+            let viewModel = MovieDetailsViewModel(movieID: movie.id, fetchMovieDetailsUseCase: viewModel.fetchMovieDetailsUseCase)
+            MovieDetailsView(viewModel: viewModel, path: $path)
         }
     }
 

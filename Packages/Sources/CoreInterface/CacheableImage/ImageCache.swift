@@ -9,15 +9,23 @@ import UIKit
 
 class ImageCache {
     static let shared = ImageCache()
-    private init() {}
 
     private var cache = NSCache<NSURL, UIImage>()
+
+    private init() {}
 
     func image(for url: URL) -> UIImage? {
         return cache.object(forKey: url as NSURL)
     }
 
     func setImage(_ image: UIImage, for url: URL) {
-        cache.setObject(image, forKey: url as NSURL)
+        // Compress the image to JPEG with the specified quality
+        guard let compressedData = image.jpegData(compressionQuality: 0.3),
+              let compressedImage = UIImage(data: compressedData) else {
+            return
+        }
+
+        let cost = compressedData.count
+        cache.setObject(compressedImage, forKey: url as NSURL, cost: cost)
     }
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import MovieDetails
 
 public class MoviesViewModel: ObservableObject {
     @Published var movies: [Movie] = []
@@ -17,7 +18,7 @@ public class MoviesViewModel: ObservableObject {
     }
 
     var currentPage: Int = 0
-    var totalPages: Int = 0
+    var totalPages: Int = 1
     var isLoading: Bool = false
 
     private let fetchMoviesUseCase: FetchMoviesUseCase
@@ -26,6 +27,11 @@ public class MoviesViewModel: ObservableObject {
         fetchMoviesUseCase: FetchMoviesUseCase
     ) {
         self.fetchMoviesUseCase = fetchMoviesUseCase
+    }
+
+    var fetchMovieDetailsUseCase: DefaultFetchMovieDetailsUseCase {
+        let movieDetailsRepository = MovieDetailsRepositoryImpl(api: MovieDetailsAPI())
+        return DefaultFetchMovieDetailsUseCase(repository: movieDetailsRepository)
     }
 
     final func fetchMovies(refreshMovies: Bool = false) async {
@@ -53,10 +59,12 @@ public class MoviesViewModel: ObservableObject {
     }
 
     final func resetMovies() {
-        self.movies = []
-        self.currentPage = 0
-        self.totalPages = 0
-        self.isLoading = false
+        DispatchQueue.main.async {
+            self.movies = []
+            self.currentPage = 0
+            self.totalPages = 1
+            self.isLoading = false
+        }
     }
 
     func createRequest() -> FetchMoviesRequest {

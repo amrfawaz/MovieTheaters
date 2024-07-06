@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  TabsViewModel.swift
+//
 //
 //  Created by AmrFawaz on 05/07/2024.
 //

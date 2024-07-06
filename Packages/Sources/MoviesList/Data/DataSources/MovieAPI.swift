@@ -26,6 +26,7 @@ public class MovieAPI: MovieAPIProtocol {
     public func fetchMovies(request: FetchMoviesRequest) async throws -> FetchMoviesResponse {
         guard let url = request.request?.url else { throw NetworkError.invalidURL }
 
+        print(url.absoluteString)
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
         components?.queryItems = request.params.map { URLQueryItem(name: $0.key, value: $0.value) }
 
