@@ -61,10 +61,10 @@ public class MoviesViewModel: ObservableObject {
     final func resetMovies() {
         DispatchQueue.main.async {
             self.movies = []
-            self.currentPage = 0
-            self.totalPages = 1
-            self.isLoading = false
         }
+        self.currentPage = 0
+        self.totalPages = 1
+        self.isLoading = false
     }
 
     func createRequest() -> FetchMoviesRequest {
