@@ -28,7 +28,7 @@ public class MoviesViewModel: ObservableObject {
         self.fetchMoviesUseCase = fetchMoviesUseCase
     }
 
-    final func fetchMovies(refreshMovies: Bool = false) {
+    final func fetchMovies(refreshMovies: Bool = false) async {
         if refreshMovies {
             resetMovies()
         }
@@ -36,20 +36,18 @@ public class MoviesViewModel: ObservableObject {
         guard currentPage <= totalPages && !isLoading else { return }
         isLoading = true
 
-        Task {
-            do {
-                let response = try await fetchMoviesUseCase.execute(request: createRequest(), page: currentPage + 1)
-                DispatchQueue.main.async {
-                    self.movies.append(contentsOf: response.movies)
-                    self.currentPage = response.page
-                    self.totalPages = response.totalPages
-                    self.isLoading = false
-                }
-            } catch {
-                DispatchQueue.main.async {
-                    self.errorMessage = error.localizedDescription
-                    self.isLoading = false
-                }
+        do {
+            let response = try await fetchMoviesUseCase.execute(request: createRequest(), page: currentPage + 1)
+            DispatchQueue.main.async {
+                self.movies.append(contentsOf: response.movies)
+                self.currentPage = response.page
+                self.totalPages = response.totalPages
+                self.isLoading = false
+            }
+        } catch {
+            DispatchQueue.main.async {
+                self.errorMessage = error.localizedDescription
+                self.isLoading = false
             }
         }
     }

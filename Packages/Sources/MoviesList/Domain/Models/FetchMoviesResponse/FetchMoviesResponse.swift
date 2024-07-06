@@ -1,5 +1,5 @@
 //
-//  FetchPopularMoviesResponse.swift
+//  FetchMoviesResponse.swift
 //
 //
 //  Created by AmrFawaz on 04/07/2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct FetchPopularMoviesResponse: Codable {
+public struct FetchMoviesResponse: Codable {
     let page: Int
     let movies: [Movie]
     let totalPages: Int

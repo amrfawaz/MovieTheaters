@@ -10,12 +10,12 @@ import AppConfigurations
 import Networking
 
 public protocol MovieAPIProtocol {
-    func fetchMovies(request: FetchMoviesRequest) async throws -> FetchPopularMoviesResponse
+    func fetchMovies(request: FetchMoviesRequest) async throws -> FetchMoviesResponse
 }
 
 public class MovieAPI: MovieAPIProtocol {
     private let urlSession = URLSession.shared
-    private lazy var response = FetchPopularMoviesResponse(
+    private lazy var response = FetchMoviesResponse(
         page: 0,
         movies: [],
         totalPages: 0
@@ -23,7 +23,7 @@ public class MovieAPI: MovieAPIProtocol {
 
     public init() {}
 
-    public func fetchMovies(request: FetchMoviesRequest) async throws -> FetchPopularMoviesResponse {
+    public func fetchMovies(request: FetchMoviesRequest) async throws -> FetchMoviesResponse {
         guard let url = request.request?.url else { throw NetworkError.invalidURL }
 
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
@@ -34,7 +34,7 @@ public class MovieAPI: MovieAPIProtocol {
         let network = NetworkManager()
 
         do {
-            return try await network.request(request: request, of: FetchPopularMoviesResponse.self)
+            return try await network.request(request: request, of: FetchMoviesResponse.self)
         } catch {
             throw error
         }

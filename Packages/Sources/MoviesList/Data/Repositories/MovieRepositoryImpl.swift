@@ -14,7 +14,7 @@ public class MovieRepositoryImpl: MovieRepository {
         self.api = api
     }
 
-    public func fetchMovies<T: FetchMoviesRequest>(request: T) async throws -> FetchPopularMoviesResponse {
+    public func fetchMovies<T: FetchMoviesRequest>(request: T) async throws -> FetchMoviesResponse {
         return try await api.fetchMovies(request: request)
     }
 }
