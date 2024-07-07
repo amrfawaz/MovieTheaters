@@ -82,8 +82,8 @@ public struct MoviesView<ViewModel: MoviesViewModel>: View {
             }
         }
         .navigationDestination(for: Movie.self) { movie in
-            let viewModel = MovieDetailsViewModel(movieID: movie.id, fetchMovieDetailsUseCase: viewModel.fetchMovieDetailsUseCase)
-            MovieDetailsView(viewModel: viewModel, path: $path)
+            let movieDetailsViewModel = Container.getMovieDdetailsViewModel(movieID: movie.id)
+            MovieDetailsView(viewModel: movieDetailsViewModel, path: $path)
         }
     }
 

@@ -29,11 +29,6 @@ public class MoviesViewModel: ObservableObject {
         self.fetchMoviesUseCase = fetchMoviesUseCase
     }
 
-    var fetchMovieDetailsUseCase: DefaultFetchMovieDetailsUseCase {
-        let movieDetailsRepository = MovieDetailsRepositoryImpl(api: MovieDetailsAPI())
-        return DefaultFetchMovieDetailsUseCase(repository: movieDetailsRepository)
-    }
-
     final func fetchMovies(refreshMovies: Bool = false) async {
         if refreshMovies {
             resetMovies()

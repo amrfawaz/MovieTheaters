@@ -17,17 +17,8 @@ public final class TabsViewModel: ObservableObject {
 
     public init(fetchMoviesUseCase: FetchMoviesUseCase) {
         self.fetchMoviesUseCase = fetchMoviesUseCase
-        self.popularMoviesViewModel = PopularMoviesViewModel(
-            category: .popular,
-            fetchMoviesUseCase: fetchMoviesUseCase
-        )
-        self.nowPlayingMoviesViewModel = NowPlayingMoviesViewModel(
-            category: .nowPlaying,
-            fetchMoviesUseCase: fetchMoviesUseCase
-        )
-        self.upcomingMoviesViewModel = UpcomingMoviesViewModel(
-            category: .upcoming,
-            fetchMoviesUseCase: fetchMoviesUseCase
-        )
+        self.popularMoviesViewModel = Container.getPopularMoviesViewModel(fetchMoviesUseCase: fetchMoviesUseCase)
+        self.nowPlayingMoviesViewModel = Container.getNowPlayingMoviesViewModel(fetchMoviesUseCase: fetchMoviesUseCase)
+        self.upcomingMoviesViewModel = Container.getUpcomingMoviesViewModel(fetchMoviesUseCase: fetchMoviesUseCase)
     }
 }
