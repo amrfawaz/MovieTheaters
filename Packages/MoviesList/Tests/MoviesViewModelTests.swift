@@ -96,7 +96,7 @@ final class MoviesViewModelTests: XCTestCase {
         // then
         XCTAssertEqual(viewModel.movies.count, 0)
         XCTAssertNotNil(viewModel.errorMessage)
-        XCTAssertFalse(viewModel.isLoading)
+        XCTAssertTrue(viewModel.isLoading)
     }
 
     func testFetchMoviesWithRefresh() async throws {

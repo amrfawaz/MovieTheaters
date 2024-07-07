@@ -77,5 +77,4 @@ class MockNetworkManager: NetworkManager {
         }
     }
 }
-
 #endif

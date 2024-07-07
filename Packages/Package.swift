@@ -76,6 +76,10 @@ let package = Package(
             dependencies: ["MoviesList"],
             path: "MoviesList/Tests"
         ),
-
+        .testTarget(
+            name: "MovieDetailsTests",
+            dependencies: ["MovieDetails"],
+            path: "MovieDetails/Tests"
+        ),
     ]
 )

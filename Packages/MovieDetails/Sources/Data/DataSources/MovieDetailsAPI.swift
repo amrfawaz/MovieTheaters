@@ -13,8 +13,11 @@ protocol MovieDetailsAPIProtocol {
 }
 
 public final class MovieDetailsAPI: MovieDetailsAPIProtocol {
+    private let networkManager: NetworkManager
 
-    public init() {}
+    public init(networkManager: NetworkManager = NetworkManager()) {
+        self.networkManager = networkManager
+    }
 
     public func fetchMovieDetails(movieID: Int) async throws -> MovieDetails {
         let request = MovieDetailsRequest(movieID: movieID)
@@ -22,8 +25,6 @@ public final class MovieDetailsAPI: MovieDetailsAPIProtocol {
         guard let urlRequest = request.request else {
             throw NetworkError.invalidRequest
         }
-
-        let networkManager = NetworkManager()
 
         do {
             return try await networkManager.request(request: urlRequest, of: MovieDetails.self)
