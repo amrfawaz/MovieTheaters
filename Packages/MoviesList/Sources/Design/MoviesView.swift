@@ -21,9 +21,12 @@ public struct MoviesView<ViewModel: MoviesViewModel>: View {
         NavigationStack(path: $path) {
             content
                 .padding(.vertical, Style.Spacing.md)
-                .onFirstAppear {
+                .task {
                     await viewModel.fetchMovies()
                 }
+//                .onFirstAppear {
+//                    await viewModel.fetchMovies()
+//                }
                 .alert(isPresented: Binding<Bool>(
                     get: { !viewModel.errorMessage.isEmpty },
                     set: { newValue in

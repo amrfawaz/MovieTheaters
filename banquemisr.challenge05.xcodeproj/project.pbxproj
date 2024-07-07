@@ -7,25 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		848D9AAF2C3A9454001ED020 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848D9AAE2C3A9454001ED020 /* XCTest.framework */; platformFilter = ios; };
+		848D9AB12C3A9FA0001ED020 /* MovieAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D9AB02C3A9FA0001ED020 /* MovieAPITests.swift */; };
+		848D9AB32C3AA1B3001ED020 /* FetchMoviesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D9AB22C3AA1B3001ED020 /* FetchMoviesUseCaseTests.swift */; };
+		848D9AB52C3AA316001ED020 /* MoviesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D9AB42C3AA316001ED020 /* MoviesViewModelTests.swift */; };
 		848FB7852C36123000624717 /* banquemisr_challenge05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FB7842C36123000624717 /* banquemisr_challenge05App.swift */; };
 		848FB7872C36123000624717 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FB7862C36123000624717 /* ContentView.swift */; };
 		848FB7892C36123900624717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848FB7882C36123900624717 /* Assets.xcassets */; };
 		848FB78C2C36123900624717 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848FB78B2C36123900624717 /* Preview Assets.xcassets */; };
-		848FB7962C36123B00624717 /* banquemisr_challenge05Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FB7952C36123B00624717 /* banquemisr_challenge05Tests.swift */; };
 		848FB7A02C36123B00624717 /* banquemisr_challenge05UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FB79F2C36123B00624717 /* banquemisr_challenge05UITests.swift */; };
 		848FB7A22C36123B00624717 /* banquemisr_challenge05UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FB7A12C36123B00624717 /* banquemisr_challenge05UITestsLaunchTests.swift */; };
 		848FB7B42C378C8F00624717 /* Tabs in Frameworks */ = {isa = PBXBuildFile; productRef = 848FB7B32C378C8F00624717 /* Tabs */; };
+		84D050A62C3A250E001D4CC2 /* banquemisr_challenge05Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D050A52C3A250E001D4CC2 /* banquemisr_challenge05Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		848FB7922C36123B00624717 /* PBXContainerItemProxy */ = {
+		848FB79C2C36123B00624717 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 848FB7792C36123000624717 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 848FB7802C36123000624717;
 			remoteInfo = banquemisr.challenge05;
 		};
-		848FB79C2C36123B00624717 /* PBXContainerItemProxy */ = {
+		84D050A72C3A250E001D4CC2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 848FB7792C36123000624717 /* Project object */;
 			proxyType = 1;
@@ -35,18 +39,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		848D9AAE2C3A9454001ED020 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		848D9AB02C3A9FA0001ED020 /* MovieAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieAPITests.swift; path = Packages/MoviesList/Tests/MovieAPITests.swift; sourceTree = "<group>"; };
+		848D9AB22C3AA1B3001ED020 /* FetchMoviesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FetchMoviesUseCaseTests.swift; path = Packages/MoviesList/Tests/FetchMoviesUseCaseTests.swift; sourceTree = "<group>"; };
+		848D9AB42C3AA316001ED020 /* MoviesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoviesViewModelTests.swift; path = Packages/MoviesList/Tests/MoviesViewModelTests.swift; sourceTree = "<group>"; };
 		848FB7812C36123000624717 /* banquemisr.challenge05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = banquemisr.challenge05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848FB7842C36123000624717 /* banquemisr_challenge05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = banquemisr_challenge05App.swift; sourceTree = "<group>"; };
 		848FB7862C36123000624717 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		848FB7882C36123900624717 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		848FB78B2C36123900624717 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		848FB7912C36123B00624717 /* banquemisr.challenge05Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = banquemisr.challenge05Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848FB7952C36123B00624717 /* banquemisr_challenge05Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = banquemisr_challenge05Tests.swift; sourceTree = "<group>"; };
 		848FB79B2C36123B00624717 /* banquemisr.challenge05UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = banquemisr.challenge05UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848FB79F2C36123B00624717 /* banquemisr_challenge05UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = banquemisr_challenge05UITests.swift; sourceTree = "<group>"; };
 		848FB7A12C36123B00624717 /* banquemisr_challenge05UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = banquemisr_challenge05UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		848FB7AE2C3612BC00624717 /* Packages */ = {isa = PBXFileReference; lastKnownFileType = text; path = Packages; sourceTree = SOURCE_ROOT; };
 		848FB7B22C361ECF00624717 /* banquemisr-challenge05-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "banquemisr-challenge05-Info.plist"; sourceTree = SOURCE_ROOT; };
+		84D050A32C3A250E001D4CC2 /* banquemisr.challenge05Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = banquemisr.challenge05Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D050A52C3A250E001D4CC2 /* banquemisr_challenge05Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = banquemisr_challenge05Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +67,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		848FB78E2C36123B00624717 /* Frameworks */ = {
+		848FB7982C36123B00624717 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		848FB7982C36123B00624717 /* Frameworks */ = {
+		84D050A02C3A250E001D4CC2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848D9AAF2C3A9454001ED020 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,9 +88,13 @@
 		848FB7782C36123000624717 = {
 			isa = PBXGroup;
 			children = (
+				848D9AB42C3AA316001ED020 /* MoviesViewModelTests.swift */,
+				848D9AB22C3AA1B3001ED020 /* FetchMoviesUseCaseTests.swift */,
+				848D9AB02C3A9FA0001ED020 /* MovieAPITests.swift */,
 				848FB7832C36123000624717 /* banquemisr.challenge05 */,
 				848FB7942C36123B00624717 /* banquemisr.challenge05Tests */,
 				848FB79E2C36123B00624717 /* banquemisr.challenge05UITests */,
+				84D050A42C3A250E001D4CC2 /* banquemisr.challenge05Tests */,
 				848FB7822C36123000624717 /* Products */,
 				848FB7AF2C361E7300624717 /* Frameworks */,
 			);
@@ -90,8 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				848FB7812C36123000624717 /* banquemisr.challenge05.app */,
-				848FB7912C36123B00624717 /* banquemisr.challenge05Tests.xctest */,
 				848FB79B2C36123B00624717 /* banquemisr.challenge05UITests.xctest */,
+				84D050A32C3A250E001D4CC2 /* banquemisr.challenge05Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,8 +151,17 @@
 		848FB7AF2C361E7300624717 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				848D9AAE2C3A9454001ED020 /* XCTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84D050A42C3A250E001D4CC2 /* banquemisr.challenge05Tests */ = {
+			isa = PBXGroup;
+			children = (
+				84D050A52C3A250E001D4CC2 /* banquemisr_challenge05Tests.swift */,
+			);
+			path = banquemisr.challenge05Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,24 +187,6 @@
 			productReference = 848FB7812C36123000624717 /* banquemisr.challenge05.app */;
 			productType = "com.apple.product-type.application";
 		};
-		848FB7902C36123B00624717 /* banquemisr.challenge05Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 848FB7A82C36123B00624717 /* Build configuration list for PBXNativeTarget "banquemisr.challenge05Tests" */;
-			buildPhases = (
-				848FB78D2C36123B00624717 /* Sources */,
-				848FB78E2C36123B00624717 /* Frameworks */,
-				848FB78F2C36123B00624717 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				848FB7932C36123B00624717 /* PBXTargetDependency */,
-			);
-			name = banquemisr.challenge05Tests;
-			productName = banquemisr.challenge05Tests;
-			productReference = 848FB7912C36123B00624717 /* banquemisr.challenge05Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		848FB79A2C36123B00624717 /* banquemisr.challenge05UITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 848FB7AB2C36123B00624717 /* Build configuration list for PBXNativeTarget "banquemisr.challenge05UITests" */;
@@ -200,6 +205,24 @@
 			productReference = 848FB79B2C36123B00624717 /* banquemisr.challenge05UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		84D050A22C3A250E001D4CC2 /* banquemisr.challenge05Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84D050A92C3A250F001D4CC2 /* Build configuration list for PBXNativeTarget "banquemisr.challenge05Tests" */;
+			buildPhases = (
+				84D0509F2C3A250E001D4CC2 /* Sources */,
+				84D050A02C3A250E001D4CC2 /* Frameworks */,
+				84D050A12C3A250E001D4CC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84D050A82C3A250E001D4CC2 /* PBXTargetDependency */,
+			);
+			name = banquemisr.challenge05Tests;
+			productName = banquemisr.challenge05Tests;
+			productReference = 84D050A32C3A250E001D4CC2 /* banquemisr.challenge05Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,11 +236,11 @@
 					848FB7802C36123000624717 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
-					848FB7902C36123B00624717 = {
+					848FB79A2C36123B00624717 = {
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = 848FB7802C36123000624717;
 					};
-					848FB79A2C36123B00624717 = {
+					84D050A22C3A250E001D4CC2 = {
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = 848FB7802C36123000624717;
 					};
@@ -237,8 +260,8 @@
 			projectRoot = "";
 			targets = (
 				848FB7802C36123000624717 /* banquemisr.challenge05 */,
-				848FB7902C36123B00624717 /* banquemisr.challenge05Tests */,
 				848FB79A2C36123B00624717 /* banquemisr.challenge05UITests */,
+				84D050A22C3A250E001D4CC2 /* banquemisr.challenge05Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -253,14 +276,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		848FB78F2C36123B00624717 /* Resources */ = {
+		848FB7992C36123B00624717 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		848FB7992C36123B00624717 /* Resources */ = {
+		84D050A12C3A250E001D4CC2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,14 +302,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		848FB78D2C36123B00624717 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				848FB7962C36123B00624717 /* banquemisr_challenge05Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		848FB7972C36123B00624717 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,18 +311,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84D0509F2C3A250E001D4CC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848D9AB52C3AA316001ED020 /* MoviesViewModelTests.swift in Sources */,
+				848D9AB32C3AA1B3001ED020 /* FetchMoviesUseCaseTests.swift in Sources */,
+				848D9AB12C3A9FA0001ED020 /* MovieAPITests.swift in Sources */,
+				84D050A62C3A250E001D4CC2 /* banquemisr_challenge05Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		848FB7932C36123B00624717 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 848FB7802C36123000624717 /* banquemisr.challenge05 */;
-			targetProxy = 848FB7922C36123B00624717 /* PBXContainerItemProxy */;
-		};
 		848FB79D2C36123B00624717 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 848FB7802C36123000624717 /* banquemisr.challenge05 */;
 			targetProxy = 848FB79C2C36123B00624717 /* PBXContainerItemProxy */;
+		};
+		84D050A82C3A250E001D4CC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 848FB7802C36123000624717 /* banquemisr.challenge05 */;
+			targetProxy = 84D050A72C3A250E001D4CC2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -491,44 +517,6 @@
 			};
 			name = Release;
 		};
-		848FB7A92C36123B00624717 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amr.banquemisr.challenge05.banquemisr-challenge05Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/banquemisr.challenge05.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/banquemisr.challenge05";
-			};
-			name = Debug;
-		};
-		848FB7AA2C36123B00624717 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amr.banquemisr.challenge05.banquemisr-challenge05Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/banquemisr.challenge05.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/banquemisr.challenge05";
-			};
-			name = Release;
-		};
 		848FB7AC2C36123B00624717 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -563,6 +551,40 @@
 			};
 			name = Release;
 		};
+		84D050AA2C3A250F001D4CC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amr.banquemisr.challenge05.banquemisr-challenge05Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/banquemisr.challenge05.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/banquemisr.challenge05";
+			};
+			name = Debug;
+		};
+		84D050AB2C3A250F001D4CC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amr.banquemisr.challenge05.banquemisr-challenge05Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/banquemisr.challenge05.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/banquemisr.challenge05";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -584,20 +606,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		848FB7A82C36123B00624717 /* Build configuration list for PBXNativeTarget "banquemisr.challenge05Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				848FB7A92C36123B00624717 /* Debug */,
-				848FB7AA2C36123B00624717 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		848FB7AB2C36123B00624717 /* Build configuration list for PBXNativeTarget "banquemisr.challenge05UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				848FB7AC2C36123B00624717 /* Debug */,
 				848FB7AD2C36123B00624717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84D050A92C3A250F001D4CC2 /* Build configuration list for PBXNativeTarget "banquemisr.challenge05Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D050AA2C3A250F001D4CC2 /* Debug */,
+				84D050AB2C3A250F001D4CC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

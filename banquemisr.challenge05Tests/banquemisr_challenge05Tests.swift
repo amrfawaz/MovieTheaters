@@ -2,11 +2,10 @@
 //  banquemisr_challenge05Tests.swift
 //  banquemisr.challenge05Tests
 //
-//  Created by AmrFawaz on 04/07/2024.
+//  Created by AmrFawaz on 07/07/2024.
 //
 
 import XCTest
-@testable import banquemisr_challenge05
 
 final class banquemisr_challenge05Tests: XCTestCase {
 
@@ -28,7 +27,7 @@ final class banquemisr_challenge05Tests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

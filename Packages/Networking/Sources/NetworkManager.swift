@@ -53,3 +53,29 @@ public class NetworkManager {
         }
     }
 }
+
+// MARK: - Mocks
+#if DEBUG
+class MockNetworkManager: NetworkManager {
+    var responseData: Data?
+    var responseError: NetworkError?
+
+    override func request<T: Decodable>(request: URLRequest, of type: T.Type) async throws -> T {
+        if let error = responseError {
+            throw error
+        }
+
+        guard let data = responseData else {
+            throw NetworkError.noData
+        }
+
+        do {
+            let decodedResponse = try JSONDecoder().decode(T.self, from: data)
+            return decodedResponse
+        } catch {
+            throw NetworkError.decodingError
+        }
+    }
+}
+
+#endif

@@ -31,18 +31,26 @@ let package = Package(
     targets: [
         .target(
             name: "AppConfigurations",
-            dependencies: []),
+            dependencies: [],
+            path: "AppConfigurations"
+        ),
         .target(
             name: "CoreInterface",
-            dependencies: []),
+            dependencies: [],
+            path: "CoreInterface/Sources"
+        ),
         .target(
             name: "Networking",
-            dependencies: []),
+            dependencies: [],
+            path: "Networking/Sources"
+        ),
         .target(
             name: "Tabs",
             dependencies: [
                 "MoviesList"
-            ]),
+            ],
+            path: "Tabs/Sources"
+        ),
         .target(
             name: "MoviesList",
             dependencies: [
@@ -50,13 +58,24 @@ let package = Package(
                 "AppConfigurations",
                 "Networking",
                 "MovieDetails"
-            ]),
+            ],
+            path: "MoviesList/Sources"
+        ),
         .target(
             name: "MovieDetails",
             dependencies: [
                 "CoreInterface",
                 "AppConfigurations",
                 "Networking"
-            ]),
+            ],
+            path: "MovieDetails/Sources"
+        ),
+
+        .testTarget(
+            name: "MoviesListTests",
+            dependencies: ["MoviesList"],
+            path: "MoviesList/Tests"
+        ),
+
     ]
 )

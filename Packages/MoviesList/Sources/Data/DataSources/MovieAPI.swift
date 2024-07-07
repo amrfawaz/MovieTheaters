@@ -14,6 +14,7 @@ public protocol MovieAPIProtocol {
 }
 
 public class MovieAPI: MovieAPIProtocol {
+    private let networkManager: NetworkManager
     private let urlSession = URLSession.shared
     private lazy var response = FetchMoviesResponse(
         page: 0,
@@ -21,7 +22,9 @@ public class MovieAPI: MovieAPIProtocol {
         totalPages: 0
     )
 
-    public init() {}
+    public init(networkManager: NetworkManager = NetworkManager()) {
+        self.networkManager = networkManager
+    }
 
     public func fetchMovies(request: FetchMoviesRequest) async throws -> FetchMoviesResponse {
         guard let url = request.request?.url else { throw NetworkError.invalidURL }
@@ -32,10 +35,8 @@ public class MovieAPI: MovieAPIProtocol {
 
         guard let request = request.request else { throw NetworkError.invalidRequest }
 
-        let network = NetworkManager()
-
         do {
-            return try await network.request(request: request, of: FetchMoviesResponse.self)
+            return try await networkManager.request(request: request, of: FetchMoviesResponse.self)
         } catch {
             throw error
         }
